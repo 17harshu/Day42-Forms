@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>forms</title>
+        <style>
+            .form{
+               display: flex;
+               flex-direction: column; 
+            }
+            .buttons{
+                display: flex;
+            }
+        </style>
+    </head>
+    <head>
+        <form class="form">
+            <div>
+                <label>firstName</label>
+                <input type="text" id="firstName" value=""> 
+            </div>
+
+            <div>
+                <label>lastName</label>
+                <input type="text" id="lastName" value=""> 
+            </div>
+
+            <div>
+                <label>userName</label>
+                <input type="text" id="userName" value=""> 
+            </div>
+
+            <div>
+                <label>createPassword</label>
+                <input type="password" id="createPassword" value=""> 
+            </div>
+
+            <div>
+                <label>confirmPassword</label>
+                <input type="password" id="confirmPassword" value=""> 
+            </div>
+
+            <div>
+                <label for="gender">gender</label>
+                <input type="radio" name="gender" value="male" id="male" checked><label>Male</label>
+                <input type="radio" name="gender" value="female" id="female"> <label>Female</label>          
+             </div>
+
+             <div>
+                 <label>degree</label>
+                 <input type="checkbox" id="diploma" name="degree"><label>Diploma</label>
+                 <input type="checkbox" id="be" name="degree"><label>BE</label>
+             </div>
+
+             <div>
+                 <label for="">address</label>
+                 <textarea name="textarea" id="textarea" cols="20" rows="4">Address</textarea>
+             </div>
+
+             <div>
+             <label for="">city</label>
+             <select name="city" id="pune">
+                 <option value="Pune">Pune</option>
+                 <option value="Mumbai">Mumbai</option>
+                 <option value="Solapur">Solapur</option>
+                 <option value="Nashik">Nashik</option>
+             </select>
+            </div>
+
+            <div class="buttons">
+            <input type="submit" value="Submit" id="submit">
+            <input type="reset" value="Reset" id="reset">
+        </div>
+        </form>
+
+        <script>
+            function onSubmit(){
+                alter("Submitted")
+            }
+            let button=document.getElementById("submit");
+            button.addEventListener("click", onSubmit);
+        </script>
+    </head>
+</html>
